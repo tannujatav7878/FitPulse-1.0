@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fitpulse-demo
+    env: node
+    buildCommand: npm install --build-from-source
+    startCommand: node server.js
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
